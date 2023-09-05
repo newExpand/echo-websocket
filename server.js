@@ -1,5 +1,5 @@
 const WebSocket = require("ws");
-const server = WebSocket.Server({ port: 3000 });
+const server = new WebSocket.Server({ port: 3000 });
 
 server.on("connection", (ws) => {
     ws.send("[서버 접속 완료!]");
